@@ -1,0 +1,71 @@
+/* Imports */
+/* Custom properties */
+:root {
+  --color-primary: hsl(183, 100%, 15%);
+  --color-secondary: hsl(186, 14%, 43%);
+  --color-accent: hsl(172, 67%, 45%);
+  --color-neutral-gray: hsl(184, 14%, 56%);
+  --color-neutral-cyan: hsl(185, 41%, 84%);
+  --color-neutral-light: hsl(189, 41%, 97%);
+  --color-white: hsl(0, 0%, 100%);
+}
+
+/* Root and body*/
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-neutral-cyan);
+  font-family: "Space Mono", monospace;
+  overflow: hidden;
+}
+
+/* Typography */
+html {
+  font-size: 62.5%;
+}
+h1 {
+  color: var(--color-secondary);
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  overflow-wrap: break-word;
+  width: 75px;
+  text-align: center;
+}
+
+/* Container */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  max-width: 100vw;
+}
+
+.box {
+  position: relative;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  background-color: var(--color-white);
+  width: 100%;
+  height: 90vh;
+}
+
+/* @media screen and (min-width: 768px) {
+  .box {
+    max-width: 70%;
+  }
+} */
+
+/* Required FrontEnd Mentor style */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}

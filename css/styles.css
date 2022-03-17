@@ -1,4 +1,5 @@
 /* Imports */
+@import url(normalize.css);
 /* Custom properties */
 :root {
   --color-primary: hsl(183, 100%, 15%);
@@ -55,6 +56,17 @@ h1 {
   height: 90vh;
 }
 
+/* @media screen and (min-width: 768px) {
+  .box {
+    max-width: 70%;
+  }
+} */
+
+/* Pointer */
+.pointer {
+  cursor: pointer;
+}
+
 /* Radio Button */
 .radio input[type="radio"] {
   opacity: 0;
@@ -86,11 +98,45 @@ h1 {
   color: var(--color-primary);
 }
 
-/* @media screen and (min-width: 768px) {
-  .box {
-    max-width: 70%;
-  }
-} */
+/* text input */
+.input {
+  display: block;
+}
+
+.input input {
+  color: var(--color-primary);
+  background-color: var(--color-neutral-light);
+  border: 0;
+  font-size: 2.4rem;
+  font-family: inherit;
+  border-radius: 3px;
+  text-align: end;
+  margin-top: 1rem;
+}
+
+.icon {
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: 1.5rem;
+}
+
+.icon__dollar {
+  background-image: url(../images/icon-dollar.svg);
+}
+.icon__person {
+  background-image: url(../images/icon-person.svg);
+}
+
+.input input:focus {
+  outline: solid 2px var(--color-accent);
+}
+
+.input label {
+  color: var(--color-secondary);
+  font-size: 1.4rem;
+  text-transform: capitalize;
+  text-align: left;
+}
 
 /* Required FrontEnd Mentor style */
 .attribution {

@@ -8,6 +8,7 @@
   --color-neutral-gray: hsl(184, 14%, 56%);
   --color-neutral-cyan: hsl(185, 41%, 84%);
   --color-neutral-light: hsl(189, 41%, 97%);
+  --color-error: hsl(0, 100%, 38%);
   --color-white: hsl(0, 0%, 100%);
 }
 
@@ -228,12 +229,21 @@ h1 {
   outline: solid 2px var(--color-accent);
 }
 
+.input--error {
+  outline: solid 2px var(--color-error);
+}
+
 .input label,
 label {
   color: var(--color-secondary);
   font-size: 1.4rem;
   text-transform: capitalize;
   text-align: left;
+}
+
+/* People */
+.error {
+  color: var(--color-error);
 }
 
 /* Pointer */

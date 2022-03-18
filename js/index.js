@@ -32,6 +32,11 @@ function calculateTip() {
       percent = 0.25;
     } else if (document.getElementById("fifty").checked) {
       percent = 0.5;
+    } else if (document.getElementById("customTip").focus) {
+      let customPercent = document.getElementById("customTip").value;
+      document.getElementById("ten").checked = false;
+      percent = "0." + customPercent;
+      parseInt(percent);
     } else {
       percent = 0;
     }

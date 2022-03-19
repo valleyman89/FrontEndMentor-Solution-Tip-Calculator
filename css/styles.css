@@ -70,6 +70,7 @@ html {
   }
   .box-tip {
     grid-column: 1;
+    align-self: center;
   }
   .box-people {
     grid-column: 1;
@@ -149,11 +150,11 @@ html {
   }
 
   .result--text {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 
   .result--total {
-    font-size: 5rem;
+    font-size: 4rem;
   }
   .tip-per-person {
     grid-row: 1;
@@ -187,7 +188,7 @@ html {
   font-size: 2.5rem;
   padding: 1rem;
   text-transform: uppercase;
-  width: 27rem;
+  width: 75vw;
 }
 
 .btn--primary {
@@ -197,6 +198,13 @@ html {
 
 .btn:hover {
   background-color: var(--color-neutral-cyan);
+}
+
+@media screen and (min-width: 768px) {
+  .btn {
+    align-self: stretch;
+    width: 25rem;
+  }
 }
 
 /* Radio Button */

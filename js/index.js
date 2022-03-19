@@ -10,6 +10,16 @@ function clearSplitter() {
   clearError();
 }
 
+function clearRadio() {
+  var radioButtons = document.getElementsByName("percent");
+
+  for (var x = 0; x < radioButtons.length; x++) {
+    if (radioButtons[x].type == "radio") {
+      radioButtons[x].checked = false;
+    }
+  }
+}
+
 window.onload = clearSplitter;
 
 function calculateTip() {
@@ -33,14 +43,14 @@ function calculateTip() {
     } else if (document.getElementById("fifty").checked) {
       percent = 0.5;
     } else if (document.getElementById("customTip").focus) {
+      clearRadio();
+
       let customPercent = document.getElementById("customTip").value;
-      document.getElementById("ten").checked = false;
       percent = "0." + customPercent;
       parseInt(percent);
     } else {
       percent = 0;
     }
-
     let tipPerPerson = ((bill * percent) / people).toFixed(2);
     let totalPerson = bill / people;
     let total = parseFloat(totalPerson) + parseFloat(tipPerPerson);

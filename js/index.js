@@ -28,10 +28,11 @@ function calculateTip() {
 
   if (people === 0) {
     document.getElementById("error").innerText = "Can't be zero";
-    let input = document.getElementById("inputPeople");
-    input.classList.add("input--error");
+    let peopleError = document.getElementById("inputPeople");
+    peopleError.classList.add("input--error");
   } else {
     clearError();
+
     if (document.getElementById("five").checked) {
       percent = 0.05;
     } else if (document.getElementById("ten").checked) {
@@ -47,6 +48,7 @@ function calculateTip() {
 
       let customPercent = document.getElementById("customTip").value;
       percent = "0." + customPercent;
+      console.log(customPercent);
       parseInt(percent);
     } else {
       percent = 0;

@@ -37,48 +37,48 @@ html {
 }
 /* Container */
 .container {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
 }
 
 /* info box */
 .box {
-  position: relative;
+  background-color: var(--color-white);
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
-  background-color: var(--color-white);
-  padding: 2rem;
-  width: 100%;
   height: 100vh;
+  padding: 2rem;
+  position: relative;
+  width: 100%;
 }
 
 @media screen and (min-width: 768px) {
   .box {
-    display: grid;
-    grid-template: auto auto auto / 50fr 50fr;
-    row-gap: 0;
-    column-gap: 4rem;
-    max-width: 70%;
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
+    column-gap: 4rem;
+    display: grid;
+    grid-template: auto auto auto / 50fr 50fr;
     height: 50vh;
+    max-width: 70%;
+    row-gap: 0;
   }
   .box-bill {
     grid-column: 1;
   }
   .box-tip {
-    grid-column: 1;
     align-self: center;
+    grid-column: 1;
   }
   .box-people {
     grid-column: 1;
   }
   .box-result {
-    grid-row: -1 / -4;
-    grid-column: 2;
     align-items: stretch;
+    grid-column: 2;
+    grid-row: -1 / -4;
   }
 }
 
@@ -107,19 +107,19 @@ html {
 }
 
 .tip-total {
-  justify-self: flex-end;
   grid-area: tip-total;
+  justify-self: flex-end;
 }
 
 .total {
-  justify-self: flex-end;
   grid-area: total;
+  justify-self: flex-end;
 }
 
 .button {
-  justify-self: center;
   align-self: center;
   grid-area: button;
+  justify-self: center;
 }
 
 .result--total {
@@ -143,9 +143,9 @@ html {
 
 @media screen and (min-width: 768px) {
   .result--box {
+    align-content: center;
     display: grid;
     grid-template: auto auto / auto auto;
-    align-content: center;
     row-gap: 5rem;
   }
 
@@ -157,33 +157,33 @@ html {
     font-size: 4rem;
   }
   .tip-per-person {
-    grid-row: 1;
     grid-column: 1;
+    grid-row: 1;
   }
   .total-per-person {
-    grid-row: 2;
     grid-column: 1;
+    grid-row: 2;
   }
   .tip-total {
-    grid-row: 1;
     grid-column: 2;
+    grid-row: 1;
   }
   .total {
-    grid-row: 2;
     grid-column: 2;
+    grid-row: 2;
   }
   .reset {
-    grid-row: 3;
     grid-column: -3/ -1;
+    grid-row: 3;
   }
 }
 
 /* Button */
 .btn {
   align-content: center;
-  display: block;
   border-radius: 5px;
   border: 0;
+  display: block;
   font-family: inherit;
   font-size: 2.5rem;
   padding: 1rem;
@@ -247,33 +247,33 @@ html {
 }
 
 .input input {
-  color: var(--color-primary);
   background-color: var(--color-neutral-light);
-  border: 0;
-  font-size: 2.4rem;
-  font-family: inherit;
   border-radius: 3px;
-  text-align: end;
-  margin-top: 1rem;
+  border: 0;
+  color: var(--color-primary);
+  font-family: inherit;
+  font-size: 2.4rem;
   margin-bottom: 2rem;
+  margin-top: 1rem;
+  text-align: end;
   width: 100%;
 }
 
 .input--custom {
   background-color: var(--color-neutral-light);
+  border-radius: 3px;
   color: var(--color-primary);
   display: inline-block;
-  border-radius: 3px;
-  text-align: center;
   font-size: 1.7rem;
+  text-align: center;
   text-transform: capitalize;
 }
 
 .icon {
-  background-repeat: no-repeat;
-  background-position: left;
-  background-size: 1.5rem;
   background-position: 5%;
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: 1.5rem;
 }
 
 .icon__dollar {
@@ -296,8 +296,8 @@ html {
 label {
   color: var(--color-secondary);
   font-size: 1.4rem;
-  text-transform: capitalize;
   text-align: left;
+  text-transform: capitalize;
 }
 
 /* People */

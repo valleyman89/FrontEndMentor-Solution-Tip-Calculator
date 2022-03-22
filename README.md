@@ -37,7 +37,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [https://valleyman89.github.io/FrontEndMentor-Solution-Tip-Calculator](https://valleyman89.github.io/FrontEndMentor-Solution-Tip-Calculator/)
 
 ## My process
 
@@ -63,7 +63,7 @@ My JavaScript knowledge is not as fresh as I thought it was, as I found my JS so
 
 I would like to try and remember to use semantic HTML as this seems to be a blindspot for me. Also, I feel the JavaScript solution is messy and convoluted, so I will need to refocus learning efforts on basic/vanilla JS.
 
-I tried a bottom-up approach for this solution, and found myself not adhering to the methodolgoy and doing it all in one go - so I would like to continute bottom-up approaches to fornt-end development.
+I tried a bottom-up approach for this solution, and found myself not adhering to the methodology and doing it all in one go - so I would like to continute bottom-up approaches to front-end development.
 
 I also would like to learn more about BEM, which I tried to implement in this solution, which resulted in some, if not all, of the applications being incorrect.
 

@@ -1,63 +1,45 @@
-function clearError() {
-  document.getElementById("error").innerText = "";
-  let input = document.getElementById("inputPeople");
-  input.classList.remove("input--error");
-}
+let percent = 0;
+document.getElementById("tipTotal").innerText = "0";
+document.getElementById("resultTotal").innerText = "0";
 
-function clearSplitter() {
-  document.getElementById("tipTotal").innerText = "0";
-  document.getElementById("resultTotal").innerText = "0";
-  clearError();
-}
+function switchError(state) {
+  let peopleError = document.getElementById("inputPeople");
 
-function clearRadio() {
-  var radioButtons = document.getElementsByName("percent");
-
-  for (var x = 0; x < radioButtons.length; x++) {
-    if (radioButtons[x].type == "radio") {
-      radioButtons[x].checked = false;
-    }
-  }
-}
-
-window.onload = clearSplitter;
-
-function calculateTip() {
-  let bill = parseFloat(document.getElementById("inputBill").value);
-  let people = parseInt(document.getElementById("inputPeople").value);
-
-  if (people === 0) {
+  if (state === 1) {
     document.getElementById("error").innerText = "Can't be zero";
-    let peopleError = document.getElementById("inputPeople");
     peopleError.classList.add("input--error");
   } else {
-    clearError();
-
-    if (document.getElementById("five").checked) {
-      percent = 0.05;
-    } else if (document.getElementById("ten").checked) {
-      percent = 0.1;
-    } else if (document.getElementById("fifteen").checked) {
-      percent = 0.15;
-    } else if (document.getElementById("twenty-five").checked) {
-      percent = 0.25;
-    } else if (document.getElementById("fifty").checked) {
-      percent = 0.5;
-    } else if (document.getElementById("customTip").focus) {
-      clearRadio();
-
-      let customPercent = document.getElementById("customTip").value;
-      percent = "0." + customPercent;
-      console.log(customPercent);
-      parseInt(percent);
-    } else {
-      percent = 0;
-    }
-    let tipPerPerson = ((bill * percent) / people).toFixed(2);
-    let totalPerson = bill / people;
-    let total = parseFloat(totalPerson) + parseFloat(tipPerPerson);
-
-    document.getElementById("tipTotal").innerText = parseFloat(tipPerPerson);
-    document.getElementById("resultTotal").innerText = total.toFixed(2);
+    document.getElementById("error").innerText = "";
+    peopleError.classList.remove("input--error");
   }
 }
+
+document.getElementById("reset").addEventListener("click", (event) => {
+  switchError(0);
+  document.getElementById("inputBill").value = "";
+  document.getElementById("inputPeople").value = "";
+  document.getElementById("tipTotal").innerText = "0";
+  document.getElementById("resultTotal").innerText = "0";
+});
+
+document.getElementById("tip").addEventListener("click", (event) => {
+  let bill = parseFloat(document.getElementById("inputBill").value);
+  let people = parseInt(document.getElementById("inputPeople").value);
+  let percent = parseFloat(event.target.value / 100);
+  if (people === 0) {
+    switchError(1);
+  } else {
+    switchError(0);
+    // tip per person
+    let tip = (document.getElementById("tipTotal").innerText = (
+      (bill * percent) /
+      people
+    ).toFixed(2));
+
+    // total per person
+    let total = bill / people + parseFloat(tip);
+    document.getElementById("resultTotal").innerText = parseFloat(
+      parseFloat(total).toFixed(2)
+    );
+  }
+});

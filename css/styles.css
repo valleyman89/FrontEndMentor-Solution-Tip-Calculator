@@ -54,7 +54,7 @@ html {
   width: 100%;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1008px) {
   .box {
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
@@ -141,7 +141,7 @@ html {
   color: var(--color-neutral-gray);
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1008px) {
   .result--box {
     align-content: center;
     display: grid;
@@ -200,7 +200,7 @@ html {
   background-color: var(--color-neutral-cyan);
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1008px) {
   .btn {
     align-self: stretch;
     width: 25rem;

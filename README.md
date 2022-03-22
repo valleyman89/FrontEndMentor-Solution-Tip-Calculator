@@ -36,7 +36,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/tip-calculator-vanilla-js-responsive-design-W1EQ5OqVIu](https://www.frontendmentor.io/solutions/tip-calculator-vanilla-js-responsive-design-W1EQ5OqVIu)
 - Live Site URL: [https://valleyman89.github.io/FrontEndMentor-Solution-Tip-Calculator](https://valleyman89.github.io/FrontEndMentor-Solution-Tip-Calculator/)
 
 ## My process

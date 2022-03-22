@@ -21,135 +21,95 @@
   </head>
   <body>
     <main>
-      <form>
-        <div class="container">
-          <img class="logo" src="images/logo.svg" alt="" />
-          <div class="box">
-            <!-- bill input -->
-            <div class="box-bill">
-              <div class="input">
-                <label for="bill">bill</label>
-                <input
-                  onclick="calculateTip()"
-                  autocomplete="off"
-                  type="number"
-                  inputmode="numeric"
-                  class="input pointer icon icon__dollar"
-                  min="1"
-                  max="10000"
-                  name="bill"
-                  id="inputBill"
-                  placeholder="0"
-                />
-              </div>
+      <div class="container">
+        <img class="logo" src="images/logo.svg" alt="" />
+        <div class="box">
+          <!-- bill input -->
+          <div class="box-bill">
+            <div class="input">
+              <label for="bill">bill</label>
+              <input
+                autocomplete="off"
+                type="number"
+                inputmode="numeric"
+                class="input pointer icon icon__dollar"
+                min="1"
+                max="10000"
+                name="bill"
+                id="inputBill"
+                placeholder="0"
+              />
             </div>
-            <!-- tip radio button -->
-            <div class="box-tip">
-              <label for="percent">select tip %</label>
-              <div class="radio">
-                <input
-                  onclick="calculateTip()"
-                  type="radio"
-                  name="percent"
-                  id="five"
-                />
-                <label for="five" class="radio--label pointer">5%</label>
-                <input
-                  onclick="calculateTip()"
-                  type="radio"
-                  name="percent"
-                  id="ten"
-                />
-                <label for="ten" class="radio--label pointer">10%</label>
-                <input
-                  onclick="calculateTip()"
-                  type="radio"
-                  name="percent"
-                  id="fifteen"
-                />
-                <label for="fifteen" class="radio--label pointer">15%</label>
-                <input
-                  onclick="calculateTip()"
-                  type="radio"
-                  name="percent"
-                  id="twenty-five"
-                />
-                <label for="twenty-five" class="radio--label pointer"
-                  >25%</label
+          </div>
+          <!-- tip radio button -->
+          <div class="box-tip">
+            <label for="percent">select tip %</label>
+            <div id="tip">
+              <button class="btn btn-tip pointer" value="5">5%</button>
+              <button class="btn btn-tip pointer" value="10">10%</button>
+              <button class="btn btn-tip pointer" value="15">15%</button>
+              <button class="btn btn-tip pointer" value="25">25%</button>
+              <button class="btn btn-tip pointer" value="50">50%</button>
+              <input
+                autocomplete="off"
+                class="btn-tip input--custom pointer"
+                type="number"
+                inputmode="numeric"
+                min="1"
+                max="99"
+                id="customTip"
+                placeholder="custom"
+              />
+            </div>
+          </div>
+          <!-- people input -->
+          <div class="box-people">
+            <div class="input">
+              <label for="people">number of people</label>
+              <span class="error" id="error"></span>
+              <input
+                autocomplete="off"
+                type="number"
+                inputmode="numeric"
+                min="1"
+                max="100"
+                class="input pointer icon icon__person"
+                name="people"
+                id="inputPeople"
+                placeholder="0"
+              />
+            </div>
+          </div>
+          <!-- result box -->
+          <div class="box-result">
+            <div class="result--box">
+              <div class="tip-per-person">
+                <span class="result--text result__description">tip amount</span>
+                <span class="result--text result__person"> / person </span>
+              </div>
+              <div class="total-per-person">
+                <span class="result--text result__description">total</span>
+                <span class="result--text result__person"> / person </span>
+              </div>
+              <div class="tip-total result--total">
+                $<span id="tipTotal"></span>
+              </div>
+              <div class="total result--total">
+                $<span id="resultTotal"></span>
+              </div>
+              <div class="reset button">
+                <button
+                  class="btn btn--primary pointer"
+                  id="reset"
+                  type="reset"
                 >
-                <input
-                  onclick="calculateTip()"
-                  type="radio"
-                  name="percent"
-                  id="fifty"
-                />
-                <label for="fifty" class="radio--label pointer">50%</label>
-                <input
-                  onclick="calculateTip()"
-                  autocomplete="off"
-                  class="radio--label input--custom pointer"
-                  type="number"
-                  inputmode="numeric"
-                  min="1"
-                  max="99"
-                  name="percent"
-                  id="customTip"
-                  placeholder="custom"
-                />
-              </div>
-            </div>
-            <!-- people input -->
-            <div class="box-people">
-              <div class="input">
-                <label for="people">number of people</label>
-                <span class="error" id="error"></span>
-                <input
-                  onclick="calculateTip()"
-                  autocomplete="off"
-                  type="number"
-                  inputmode="numeric"
-                  min="1"
-                  max="100"
-                  class="input pointer icon icon__person"
-                  name="people"
-                  id="inputPeople"
-                  placeholder="0"
-                />
-              </div>
-            </div>
-            <!-- result box -->
-            <div class="box-result">
-              <div class="result--box">
-                <div class="tip-per-person">
-                  <span class="result--text result__description"
-                    >tip amount</span
-                  >
-                  <span class="result--text result__person"> / person </span>
-                </div>
-                <div class="total-per-person">
-                  <span class="result--text result__description">total</span>
-                  <span class="result--text result__person"> / person </span>
-                </div>
-                <div class="tip-total result--total">
-                  $<span id="tipTotal"></span>
-                </div>
-                <div class="total result--total">
-                  $<span id="resultTotal"></span>
-                </div>
-                <div class="reset button">
-                  <button
-                    class="btn btn--primary pointer"
-                    onclick="clearSplitter()"
-                    type="reset"
-                  >
-                    reset
-                  </button>
-                </div>
+                  reset
+                </button>
               </div>
             </div>
           </div>
         </div>
-      </form>
+      </div>
     </main>
     <script src="js/index.js"></script>
   </body>
